@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdf8f1;
+  --background-to: #fde3cf;
+  --foreground: #2d2520;
+  --muted: #7a6a5f;
+  --glass: rgb(255 255 255 / 0.45);
+  --glass-hover: rgb(255 255 255 / 0.65);
+  --glass-border: rgb(255 255 255 / 0.7);
+  --shadow-tint: rgb(150 90 50 / 0.18);
+  --glow-a: rgb(255 190 150 / 0.55);
+  --glow-b: rgb(255 225 180 / 0.6);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-glass: var(--glass);
+  --color-glass-hover: var(--glass-hover);
+  --color-glass-border: var(--glass-border);
+  --color-shadow-tint: var(--shadow-tint);
+  --font-sans: var(--font-pretendard);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1f1915;
+    --background-to: #3a261b;
+    --foreground: #f5ede6;
+    --muted: #bba99c;
+    --glass: rgb(255 255 255 / 0.06);
+    --glass-hover: rgb(255 255 255 / 0.11);
+    --glass-border: rgb(255 255 255 / 0.12);
+    --shadow-tint: rgb(0 0 0 / 0.35);
+    --glow-a: rgb(200 110 60 / 0.22);
+    --glow-b: rgb(160 90 50 / 0.18);
   }
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 15% 20%, var(--glow-b) 0, transparent 40%),
+    radial-gradient(circle at 85% 65%, var(--glow-a) 0, transparent 45%),
+    linear-gradient(160deg, var(--background) 0%, var(--background-to) 100%);
+  background-attachment: fixed;
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-pretendard), system-ui, sans-serif;
 }

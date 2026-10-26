@@ -12,13 +12,12 @@ export type Profile = {
 };
 
 export const profile: Profile = {
-  name: "박주연",
-  bio: "Claude Code Master",
-  imageUrl: "/profile.svg",
+  name: "Jayho",
+  bio: "풀스택 개발자 | 요즘에는 AI 개발에 관심이 많아요",
+  imageUrl: "/profile.jpg",
   links: [
-    { id: "github", title: "GitHub", url: "https://github.com" },
-    { id: "blog", title: "블로그", url: "https://velog.io" },
-    { id: "instagram", title: "Instagram", url: "https://instagram.com" },
-    { id: "youtube", title: "YouTube", url: "https://youtube.com" },
+    { id: "github", title: "🐙 깃허브", url: "https://github.com/ipak83" },
+    { id: "blog", title: "📝 블로그", url: "https://blog.naver.com/under_green" },
+    { id: "email", title: "📧 이메일", url: "mailto:ipak83@gmail.com" },
   ],
 };
